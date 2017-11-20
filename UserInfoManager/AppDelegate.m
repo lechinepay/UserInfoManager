@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "UserInfo.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UserInfo * user = [UserInfo sharedUserInfo];
+    user.name = @"赋值测试";
+    
     return YES;
 }
 
